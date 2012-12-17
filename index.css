@@ -1,0 +1,175 @@
+body                          {font-family:Helvetica;}
+.clear                        {clear:both;}
+
+/*------------------------------*/
+/*----- Spicy ------------------*/
+/*------------------------------*/
+
+@media screen and (min-width: 768px) {
+.container                    {width:768px; margin:0px auto;}
+.nav-bar                      {float:left; margin-right:20px; width:100px;}
+.nav-bar a                    {width:100%; height:45px; padding-top:10px;}
+.broadcast-content            {float:left; width:630px;}
+.widget                       {margin:10px 5% 10px 0px; width:20%;}
+.full-screen-clear            {clear:both;}
+h1                            {font-size:40px; margin-top:0px !important;}
+.charts                       {background-color:#FFF !important; margin-left:-6px !important;}
+#ipad                         {display:block !important;}
+.info                         {float:left; width:350px;}
+.form                         {float:right; margin-top:60px; margin-left:20px; width:350px;}
+.get-started                  {font-size:30px;}
+}
+
+/*------------------------------*/
+/*----- Medium -----------------*/
+/*------------------------------*/
+
+@media screen and (max-width: 768px) {
+.widget                       {margin:10px 5% 10px 0px; width:45%;}
+.mobile-clear                 {clear:both;}
+h1                            {font-size:26px;}
+}
+
+@media screen and (max-width: 700px) {
+.charts .ot-pane               {margin:0px !important;}
+}
+
+
+@media screen and (max-width: 670px) {
+.charts                        {visibility:hidden; position:absolute; top:0px;}
+.charts .row                   {margin:0px auto !important;}
+}
+
+
+/*------------------------------*/
+/*------- Mild -----------------*/
+/*------------------------------*/
+
+@media screen and (max-width: 400px) {
+.settings-link                 {margin-right:35px !important;}
+.widget                        {margin:10px 5% 10px 0px; width:45%;}
+h1                             {font-size:22px;}
+.large-number                  {font-size:22px !important; top:-9px !important;}
+.delivered-label,
+.bounced-label                 {position:relative; top:-8px;}
+.delivered-divider             {font-size:50px; color:#CCC;}
+}
+
+
+/*------------------------------*/
+/*-------------Header-------------*/
+/*------------------------------*/
+html,body                      {padding:0px; margin:0px;}
+.header                        {background:#0b4872; padding:9px 15px; width:100%; margin-bottom:10px;}
+.spinner-icon                  {display: none;}
+.refresh-icon                  {}
+.refresh                       {float:right; margin-right:45px; color:#FFF; font-family:Helvetica; text-decoration:none; font-size:14px; margin-top:5px; background-color:#41A5E7; padding:5px 7px; border-radius:4px; opacity:.7;}
+.refresh:hover                 {opacity:1;}
+
+/*------------------------------*/
+/*-------------Tabs-------------*/
+/*------------------------------*/
+.broadcast                     {background-color:#41a5e8; opacity:.5; display:block; text-align:center; padding:8px 0px; border-radius:4px; margin:10px 5% 10px 0; width:20%; height:45px; float:left; font-size:18px; font-weight:bold; color:#000; text-decoration:none; letter-spacing:-1.7px;}
+.broadcast:hover               {background-color:#9ed1f5; opacity:1;}
+.envelope-icon                 {width:45px; height:28px; display:block; background:url(images/envelope.png) no-repeat; margin:0px auto;}
+.highlight                     {opacity:1;}
+.highlight:hover               {background-color:#41a5e8;}
+
+/*------------------------------*/
+/*--------Message Stats---------*/
+/*------------------------------*/
+
+h1                             {text-align:left; margin:20px 5% 10px 0px;}
+.time                          {text-align:left; font-size:14px; margin-left:15px; margin-bottom:20px; color:#666;}
+.message-type                  {color:#CCC; border:1px solid #CCC; font-size:10px; text-transform:uppercase; letter-spacing:1px; padding:1px 2px; margin-left:5px; font-weight:100;  position:relative; top:-1px;}
+
+.row                           {text-align:center; overflow:auto; margin-left:15px;}
+.toggle                        {text-decoration: none;}
+.percent                       {display: none; }
+.number                        {}
+.large-number                  {font-size:30px; font-weight:bold; position:relative; top:-6px;}
+.delivered-label,
+.bounced-label                 {position:relative; top:-11px;}
+.delivered-divider             {font-size:50px; color:#333;}
+
+.widget                        {color:#666; text-align:center; float:left; cursor:hand;}
+.widget-large                  {text-align:center; margin:10px 5% 10px 0px; border:1px solid #CCC; padding:3px 0px; border-radius:4px; cursor:hand;}
+.widget-large a                {color:#333;}
+.block-stat                    {background-color:#88949d; color:#FFF; padding:3px 0px; font-size:38px; margin-bottom:3px; border-radius:4px; padding:0px 5px;}
+.block-stat a                  {color:#FFF;}
+.block-stat small              {font-size:18px; position:relative; top:-5px;}
+
+h2                             {font-size:16px;}
+.charts                        {background-color:#e4e4e4; margin:10px 5% 10px 15px; border-radius:4px; padding:5px; margin-top:0px;}
+.charts .row                   {overflow:inherit;}           
+.settings                      {margin-top: 20px; font-size:30px; font-weight:bold; position:relative;}
+.config-row                    {height: 30px;}
+.config-label                  {width: 200px;}
+.config                        {width: 400px;}
+
+#range                         {margin-top:10px;}
+#range label                   {color:#FFF; display:inline-block; width:100px; padding:5px 0px !important; margin-right:5px;}
+
+.app-settings                  {background-color:#41A5E5; display:block; margin-right:5%; border-radius:4px; color:#FFF; text-decoration:none; padding:7px 0px; margin-bottom:20px; opacity:.5;}
+.app-settings:hover            {opacity:1;}
+
+/*------------------------------*/
+/*-------JQ Plot Graphs --------*/
+/*------------------------------*/
+.ot-pane                         {width:580px; height:415px; border:1px solid #CCC; margin:0px auto;}
+.ot-graph                        {width: 570px; height: 330px;}
+.ui-widget                       {font-size: 0.7em;}
+
+.ui-widget-header                {border:none; background:transparent;}
+.ui-tabs-nav                     {margin:10px 0px 15px 10px !important;}
+.ui-tabs-nav li                  {margin-right:10px !important;}
+.ui-tabs-nav li a                {width:95px;}
+.ui-tabs-nav li:focus            {outline:none !important;}
+.ui-state-default                {background:#9ed1f6 !important; padding:3px !important; border:none !important; border-radius:4px !important;}
+.ui-state-default a              {color:#FFF !important; font-family:Helvetica; border:none !important; background-color:transparent !important; font-size:14px !important;}
+.ui-state-active                 {background:#41a5e8 !important;}
+.ui-widget-header a:focus        {outline:none !important;}
+.ui-widget-header a:active       {outline:none !important;}
+.ui-widget-header a:hover        {cursor:pointer;}
+.ui-button-text                  {padding:0px !important;}
+
+.jqplot-axis                     {font-size:1.2em;}
+.jqplot-xaxis                    {}
+.jqplot-xaxis-tick               {top:0px; left:15px; vertical-align:top;}
+.jqplot-xaxis-label              {margin-top:10px; font-size:11pt; position:absolute;}
+
+.jqplot-yaxis                    {margin-right:10px;}
+.jqplot-yaxis-tick               {right:0px; top:15px; text-align:right;}
+.jqplot-yaxis-label              {margin-right:10px; font-size:11px; position:absolute;}
+
+table.jqplot-table-legend, 
+table.jqplot-cursor-legend       {background-color:transparent; border:none; position:absolute; font-size:13px; color:#4b4b4b; margin-top:5px; left:625px; float:right;}
+
+td.jqplot-table-legend           {vertical-align:middle; height:20px;}
+td.jqplot-table-legend > div     {border:1px solid #cccccc; padding:0.2em;}
+div.jqplot-table-legend-swatch   {width:0px; height:0px; border-top-width:0.35em; border-bottom-width:0.35em; border-left-width:0.6em; border-right-width:0.6em; border-top-style:solid; border-bottom-style:solid; border-left-style:solid; border-right-style:solid;}
+table.jqplot-cursor-tooltip      {border:1px solid #cccccc; font-size:0.75em;}
+.jqplot-cursor-tooltip           {border:1px solid #dddddd; font-size:0.75em; white-space:nowrap; background:rgba(255,255,255,0.85); padding:3px 10px;}
+.jqplot-highlighter-tooltip      {border:1px solid #cccccc; font-size:0.75em; white-space:nowrap; background:rgba(208,208,208,0.5); padding:1px;} 
+.jqplot-point-label              {font-size: 0.75em; }
+td.jqplot-cursor-legend-swatch   {vertical-align:middle; text-align:center;}
+div.jqplot-cursor-legend-swatch  {width:1.2em; height:0.7em;}
+.jqplot-pie-line-label           {color: #666; font-size: 12px; font-family:Arial, sans-serif; text-align:center; height:12px; line-height:12px;}
+span.tooltipLabel                {font-size:1.4em;}
+span.tooltipValue                {font-weight:bold; font-size:1.4em;}
+span.Unique                      {color:#549c14}
+span.Total                       {color:#2984c2}
+
+.form                             {max-width:380px;}
+.form .widget-large               {text-align:left; padding:15px;}
+.form label                       {display:block; margin-top: 10px; margin-bottom: 5px;}
+.form input[type="text"],
+.form input[type="password"]      {width:100%; font-size:14px;}
+
+.settings-page .row              {text-align:left !important; padding-right:10px;}
+.settings-page .row a            {color:#41a5e8;}
+.settings-page .row ul li        {margin-left:-10px; margin-right:10px;}
+
+.continue                        {background-color:#41A5E5; display:block; margin-right:5%; border:none; display:block; width:100%; margin-top:10px; border-radius:4px; color:#FFF; text-decoration:none; font-size:16px; padding:7px 0px; margin-bottom:20px;}
+blockquote                       {border:1px solid #CCC; padding:15px;}
+
