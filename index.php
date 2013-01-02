@@ -169,7 +169,7 @@ if (!get_settings() || !get_cache_data('broadcast.json')) {
           Unsubscribes
         </div>
       </div>
-      
+
       <!--Number Delivered / Bounced-->
       <div class="row">
         <div class="widget-large">
@@ -194,7 +194,6 @@ if (!get_settings() || !get_cache_data('broadcast.json')) {
         </div>
       </div>
 
-
       <!-- Number of unique clicks -->
       <div class="row">
         <div class="widget-large">
@@ -205,27 +204,28 @@ if (!get_settings() || !get_cache_data('broadcast.json')) {
      <!-- graphs -->
      <div class="charts">
        <div class="row" id="range">
-         
+
          <!-- graphs -->
          <div class="ot-pane" id="graph-tabs">
            <ul>
-             <li><a href="#opens-ot">Opens</a></li>
-             <li><a href="#clicks-ot">Clicks</a></li>
-             <li><a href="#sales-ot">Sales</a></li>
-             <li><a href="#webhits-ot">Webhits</a></li>
-             <li><a href="#unsubscribed-ot">Unsubscribed</a></li>
+             <li><a href="#opens-graph">Opens</a></li>
+             <li><a href="#clicks-graph">Clicks</a></li>
+             <li><a href="#sales-graph">Sales</a></li>
+             <li><a href="#webhits-graph">Webhits</a></li>
+             <li><a href="#unsubscribed-graph">Unsubscribed</a></li>
            </ul>
-           <div class="ot-graph" id="opens-ot"></div>
-           <div class="ot-graph" id="clicks-ot"></div>
-           <div class="ot-graph" id="sales-ot"></div>
-           <div class="ot-graph" id="webhits-ot"></div>
-           <div class="ot-graph" id="unsubscribed-ot"></div>
+           <div class="ot-graph" id="opens-graph"></div>
+           <div class="ot-graph" id="clicks-graph"></div>
+           <div class="ot-graph" id="sales-graph"></div>
+           <div class="ot-graph" id="webhits-graph"></div>
+           <div class="ot-graph" id="unsubscribed-graph"></div>
          </div>
+
          <!-- range -->
          <div id="range">
-           <input id="range1" type="radio" name="range" value="hourly" onClick="update_stats('graphs');" checked />
+           <input id="range1" type="radio" name="range" value="hourly" onClick="update_stats();" checked />
            <label for="range1">1 Day</label>
-           <input id="range2" type="radio" name="range" value="daily"  onClick="update_stats('graphs');"/>
+           <input id="range2" type="radio" name="range" value="daily"  onClick="update_stats();"/>
            <label for="range2">14 Days</label> 
          </div>
        </div>
@@ -236,10 +236,5 @@ if (!get_settings() || !get_cache_data('broadcast.json')) {
    </div>
   </body>
 
-<!-- 
-
-Dynamic ajax javascript:
-This javascript will use data.php to get the values of various stats
-
--->
+<!-- UI/UX javascript code -->
 <script language="javascript" type="text/javascript" src="index.js"></script>

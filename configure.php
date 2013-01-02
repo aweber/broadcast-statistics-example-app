@@ -86,7 +86,7 @@ if (empty($consumer_key)) {
 <div class="header">
   <div class="container">
   <img src="images/logo.png" class="logo" height="36" width="142" alt="AWeber Communications"/>
-  <?php if ($page_mode == "normal") { ?>
+  <?php if (($page_mode == "normal") and ($list_id > 0)) { ?>
     <a href="index.php" class="refresh">Cancel</a>
   <?php } ?>
   </div>
@@ -98,7 +98,7 @@ if ($page_mode == "first_time") {
 ?>
       <div class="row">
         <br/>
-        <h1>Welcome to AWeber Pocket Stats!</h1>
+        <h1>Welcome to Broadcast Stats!</h1>
         <div class="info">
         <img src="images/ipad.jpg" alt="" id="ipad" style="display:none;"/>
         </div>
@@ -158,14 +158,16 @@ if ($page_mode == "first_time") {
 <?php if ($page_mode == "normal") { ?>
 
     <div class="row">
-      <form method="GET" action="configure.php">
-      <div class="settings-block">
-      <?php if (!get_cache_data('broadcast.json')) {?><br />List does not have broadcasts, please choose another list!<?php } ?>
-        <h2>Current List:</h2>
-        <input type="hidden" name="action" value="Save" />
-        <select name="list_id" style="font-size:20px;" onChange="submit();">
+      <form id="form" method="GET" action="configure.php">
+      <input type="hidden" name="action" value="Save" />
+      <input type="hidden" id="list_id" name="list_id" value="<?php echo $list_id; ?>"/>
 
-          <?php if ($list_id == 0) { ?><option value=''>--[ Please Select List ] --</option><?php } ?>
+      <div class="settings-block" id="settings-block">
+      <?php if (!get_cache_data('broadcast.json') and ($list_id > 0)) {?><br />List does not have broadcasts, please choose another list!<?php } ?>
+        <h2>Current List:</h2>
+        <select id="new_list_id" name="new_list_id" style="font-size:20px;" onChange="do_submit();">
+
+          <?php if ($list_id == 0) { ?><option value=''>--- Please Select List ---</option><?php } ?>
           <?php
             foreach($lists as $list) {
                if ($list->id == $list_id) {  echo "<option id=\"{$list->id}\" name=\"list\" value=\"{$list->id}\" selected>{$list->name}</option>"; }
@@ -181,3 +183,11 @@ if ($page_mode == "first_time") {
 
   </div>
 </body>
+<script>
+
+function do_submit(form) {
+    $("#list_id").val($("#new_list_id").val());
+    $('#settings-block').html('<br/><br/>Loading broadcast data, please wait ...');
+    $('#form').submit();
+}
+</script>

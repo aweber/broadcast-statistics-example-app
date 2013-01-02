@@ -64,13 +64,14 @@ function format_graph_data($broadcast_data, $stat_type, $stat_name, $series_labe
         // populate all series elements with each value (formatted for what jqplot requires)
         $ctr = 0;
         foreach($series_labels as $series_name) {
-            array_push($series[$ctr],  array($timestamp, $row["{$series_name}_{$stat_name}"]));
+            $name = "{$series_name}_{$stat_name}";
+            $value = array_key_exists($name, $row) ? $row[$name] : 0;
+            array_push($series[$ctr],  array($timestamp, $value));
             $ctr++;
         }
     }
 
-    // return the json encoded series data
-    return json_encode($series);
+    return $series;
 }
 
 // Return the percentage formatted to 2 decimal places or zero if undefined
@@ -196,8 +197,9 @@ function save_user_settings($list_id) {
 function get_request_tokens($consumer_key, $consumer_secret) {
 
     $settings = array();
-    $settings['consumer_key'] = $consumer_key;
-    $settings['consumer_secret'] = $consumer_secret;
+    $settings['consumer_key'] = trim($consumer_key);
+    $settings['consumer_secret'] = trim($consumer_secret);
+    set_cache_data('broadcast.json', array());
 
     try {
         $aweber = new AWeberAPI($consumer_key, $consumer_secret);
