@@ -1,4 +1,4 @@
-broadcast-quickstats-integration
+broadcast-statistics-example-app
 ================================
 
 This project is a demo that shows what you can do with the AWeber API
